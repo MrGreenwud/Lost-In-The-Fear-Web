@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 70dfa214ac1bff945a552592edd23ee6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_PointPrefab: {fileID: 1886058039602295666, guid: 82f7db4883907b545ae4fa93d240da76, type: 3}
+  - m_PointsParent: {instanceID: 0}
+  - m_FencesParent: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

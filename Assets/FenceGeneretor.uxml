@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/FenceGeneretor.uss?fileID=7433441132597879392&amp;guid=05080a3ca2ef3a040bf1cb6075161679&amp;type=3#FenceGeneretor" />
+    <ui:Label display-tooltip-when-elided="true" name="Space" />
+    <ui:Toggle label="Genereate  In  Real  Time" />
+    <ui:DropdownField label="Line Mode" index="-1" class="fdf" />
+    <ui:GroupBox>
+        <ui:Button text="Add Point" display-tooltip-when-elided="true" />
+        <ui:Button text="Divide " display-tooltip-when-elided="true" />
+        <ui:Button text="Creat Point" display-tooltip-when-elided="true" />
+    </ui:GroupBox>
+</ui:UXML>
