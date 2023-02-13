@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "Bolt \u0421utter"
   m_EditorClassIdentifier: 
   m_Type: 1
-  m_Icon: {fileID: 21300000, guid: 9c0d6ec706e01ce448aea81584af092b, type: 3}
+  m_Icon: {fileID: 21300000, guid: bf75dbb5e3c57824481c5d8be07fd6f0, type: 3}
   m_ItemName: "Bolt \u0421utter"
   m_ID: 0
   m_Prefab: {fileID: 3615618394442942905, guid: 2bcbb5a2e1c62dd47b3ab8156d743c06, type: 3}

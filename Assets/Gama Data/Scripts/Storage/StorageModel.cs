@@ -116,6 +116,12 @@ public class StorageModel
         OnUpdateStorage?.Invoke();
     }
 
+    public virtual void RemoveItemBySlot(Slot slot)
+    {
+        slot.SlotModel.RemoveItem();
+        OnUpdateStorage?.Invoke();
+    }
+
     public Slot FindSlotByItem(Item item)
     {
         if (item == null) return null;
@@ -219,8 +225,15 @@ public class StorageModel
             return;
         }
 
-        p_Storage.CreateObject(slot.SlotModel.Item.GetPrefab(), position).GetComponent<Subject>().SetCount(slot.SlotModel.Count);
-        RemoveItemByItem(slot.SlotModel.Item);
+        GameObject itemObject = p_Storage.CreateObject(slot.SlotModel.Item.GetPrefab(), position);
+        Subject subject = itemObject.GetComponent<Subject>();
+
+        subject.SetCount(slot.SlotModel.Count);
+        subject.SetAudioSource(p_Storage.Sourse());
+
+        RemoveItemBySlot(slot);
+
+        //RemoveItemByItem(slot.SlotModel.Item);
     }
 
     protected virtual bool CheckFreeSlots()

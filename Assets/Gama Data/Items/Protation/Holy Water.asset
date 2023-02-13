@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Holy Water
   m_EditorClassIdentifier: 
   m_Type: 4
-  m_Icon: {fileID: 21300000, guid: 676236dafe1c57848a3436c6dbf49d4a, type: 3}
+  m_Icon: {fileID: 21300000, guid: 366668015f6586f43b5e110adfc24e2d, type: 3}
   m_ItemName: Holy Water
   m_ID: 0
   m_Prefab: {fileID: 1947161453653434181, guid: 731925f9936ef394b85e8c6b37528987, type: 3}

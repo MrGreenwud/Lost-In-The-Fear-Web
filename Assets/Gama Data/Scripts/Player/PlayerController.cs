@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.UI;
@@ -95,6 +96,8 @@ public class PlayerController : MonoBehaviour
 
     private bool m_IsFreez;
 
+    public Action OnDeath;
+
     public float GetMaxHelth() => m_MaxHelth;
     public float GetMaxStamina() => m_MaxStamina;
 
@@ -125,8 +128,7 @@ public class PlayerController : MonoBehaviour
 
         PlayerStatsView = new PlayerStatsView(this);
 
-        PlayerStateController = new PlayerStateController(this);
-    }
+        PlayerStateController = new PlayerStateController(this);    }
 
     private void OnEnable()
     {

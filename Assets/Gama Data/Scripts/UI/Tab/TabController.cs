@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using UnityEngine;
 using Zenject;
 
@@ -9,15 +10,21 @@ public class TabController : MonoBehaviour
 
     [SerializeField] private DiaryTab m_Diary;
     [SerializeField] private ReadTab m_ReadTab;
+    [SerializeField] private DeathTab m_DeathTab;
 
     public Tab CurrentTab { get; private set; }
 
     public ReadTab GetReadTab() => m_ReadTab;
 
+    private void Awake()
+    {
+        m_PlayerController.OnDeath += ShowDeathTab;
+    }
+
     private void Update()
     {
         if (m_InputHundler.GetNoteList() == true)
-            OpenDiaryTab();
+            SwitchTab(m_Diary);
     }
 
     private void SwitchTab(Tab newTab)
@@ -52,18 +59,18 @@ public class TabController : MonoBehaviour
             CloseTab();
         }
     }
-
-    public void OpenDiaryTab()
-    {
-        SwitchTab(m_Diary);
-    }
     
+    public void ShowDeathTab()
+    {
+        SwitchTab(m_DeathTab);
+    }
+
     public void OpenReadTab()
     {
         SwitchTab(m_ReadTab);
     }
 
-    private void CloseTab()
+    public void CloseTab()
     {
         if (CurrentTab == null) return;
 

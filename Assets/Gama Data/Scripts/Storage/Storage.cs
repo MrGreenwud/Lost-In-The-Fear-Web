@@ -5,9 +5,12 @@ public class Storage : MonoBehaviour
 {
     [SerializeField] private List<Slot> m_Slots;
     [SerializeField] private SlotSelector m_SlotSelector;
+    [SerializeField] private AudioSource m_Sourse;
 
     public List<Slot> GetSlots() => m_Slots;
     public SlotSelector GetSlotSelector() => m_SlotSelector;
+
+    public AudioSource Sourse() => m_Sourse;
 
     protected void Init()
     {

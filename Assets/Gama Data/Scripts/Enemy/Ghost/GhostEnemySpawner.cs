@@ -45,6 +45,11 @@ public class GhostEnemySpawner : MonoBehaviour
             StartCoroutine(Stan(time));
     }
 
+    public void OnStan(float time)
+    {
+        StartCoroutine(Stan(time));
+    }
+
     private void SetSpawnPosition()
     {
         RaycastHit[] points = Physics.SphereCastAll(m_Target.position + m_Target.forward * 2, m_SpawnDistence,

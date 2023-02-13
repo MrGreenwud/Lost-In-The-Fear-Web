@@ -97,13 +97,9 @@ namespace BCTSTool.World
             }
         }
 
-        public void GenerateByDensity(float radius, Vector3 position, Naturals naturals, float density, int layerValue)
+        public void GenerateByDensity(float radius, Vector3 position, Naturals naturals, float density)
         {
             if (density == 0) return;
-            if (layerValue < 0) return;
-
-            LayerMask layerMask = new LayerMask();
-            layerMask.value = layerValue;
 
             NaturalInstance[] tempNaturals = naturals.GetNaturals();
             int naturalsCount = (int)((radius * radius) / density);
@@ -122,7 +118,7 @@ namespace BCTSTool.World
 
                 bool isGenerate = true;
 
-                if (Physics.Raycast(rayPosition, Vector3.down, out RaycastHit hit, 200, layerMask))
+                if (Physics.Raycast(rayPosition, Vector3.down, out RaycastHit hit, 200, m_GroundLayer))
                 {
                     RaycastHit[] hits = Physics.SphereCastAll(hit.point, density, Vector3.up * 0.1f);
 

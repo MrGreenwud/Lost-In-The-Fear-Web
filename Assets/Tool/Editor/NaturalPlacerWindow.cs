@@ -214,7 +214,7 @@ namespace BCTSTool.World
             if (s_Mode == Mode.Count)
                 m_TreePlacer.GenerateByCount(s_Radius, m_Position, s_Trees, s_Count);
             else
-                m_TreePlacer.GenerateByDensity(s_Radius, m_Position, s_Trees, s_Density, (int)s_GroundLayers);
+                m_TreePlacer.GenerateByDensity(s_Radius, m_Position, s_Trees, s_Density);
         }
 
         private void Remove()

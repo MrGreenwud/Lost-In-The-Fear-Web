@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Graveyard Kay
   m_EditorClassIdentifier: 
   m_Type: 1
-  m_Icon: {fileID: 21300000, guid: 917ffefd4196be74abc3ba6f4e03208e, type: 3}
+  m_Icon: {fileID: 21300000, guid: 18d335ffd3ed2b348a37f69c27ae2254, type: 3}
   m_ItemName: 'Graveyard''s Key '
   m_ID: 12167767
-  m_Prefab: {fileID: 0}
+  m_Prefab: {fileID: 852891810869206482, guid: ed0807e84d27d294db4b5c5433b5b82b, type: 3}
   m_IsReueble: 0
   m_IsStaceble: 0
   m_MaxStacSize: 1

@@ -1,8 +1,8 @@
 using System;
-using UnityEngine.SceneManagement;
 
 public class PlayerStats
 {
+    private readonly PlayerController m_PlayerController;
     public readonly float MaxHelth;
     public readonly float MaxStamina;
 
@@ -14,6 +14,8 @@ public class PlayerStats
 
     public PlayerStats(PlayerController playerController)
     {
+        m_PlayerController = playerController;
+
         MaxHelth = playerController.GetMaxHelth();
         MaxStamina = playerController.GetMaxStamina();
 
@@ -30,8 +32,8 @@ public class PlayerStats
         else
             CurrentHelth -= damage;
 
-        if(CurrentHelth < 1)
-            SceneManager.LoadScene(0);
+        if (CurrentHelth < 1)
+            m_PlayerController.OnDeath?.Invoke();
 
         OnChangeHelth?.Invoke();
     }
