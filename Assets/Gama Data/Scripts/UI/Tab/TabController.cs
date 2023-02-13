@@ -1,6 +1,6 @@
-using System.Runtime.InteropServices;
 using UnityEngine;
 using Zenject;
+using UnityEngine.SceneManagement;
 
 public class TabController : MonoBehaviour
 {
@@ -62,7 +62,8 @@ public class TabController : MonoBehaviour
     
     public void ShowDeathTab()
     {
-        SwitchTab(m_DeathTab);
+        SceneManager.LoadScene(0);
+        //SwitchTab(m_DeathTab);
     }
 
     public void OpenReadTab()
