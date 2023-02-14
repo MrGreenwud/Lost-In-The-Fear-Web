@@ -21,6 +21,8 @@ public class HeadRoatator : MonoBehaviour
     {
         CursorState.Hide();
         CursorState.Lock();
+
+        m_Sensetivity = Settings.s_Sensetivity;
     }
 
     private void OnEnable()

@@ -1,6 +1,4 @@
 using System.Collections;
-using Unity.Burst.CompilerServices;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
