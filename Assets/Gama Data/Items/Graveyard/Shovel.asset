@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Type: 1
   m_Icon: {fileID: 21300000, guid: da708b581fd87bb4e8bd743bceef2a95, type: 3}
   m_ItemName: Shovel
-  m_ID: 403
+  m_ID: 301
   m_Prefab: {fileID: 7280511523815019358, guid: f310fd6a5509e8149990420f8a2ccfc0, type: 3}
   m_IsReueble: 0
   m_IsStaceble: 0

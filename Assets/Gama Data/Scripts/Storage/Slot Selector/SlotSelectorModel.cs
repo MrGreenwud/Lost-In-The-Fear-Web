@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿using System;
 using SelectorType = SlotSelector.SelectorType;
 
 public class SlotSelectorModel
@@ -26,19 +26,29 @@ public class SlotSelectorModel
 
     public void Select(int slotIndex)
     {
+        if (slotIndex == CurrentSelectionSlotIndex)
+            return;
+
         SetCurrentSelectionSlotIndex(slotIndex);
         m_SlotSelector.SlotSelectorView.SelectorChangePosition();
+        m_SlotSelector.OnSelect?.Invoke();
     }
 
     public void Update()
     {
         if (m_SelectorType == SelectorType.Both || m_SelectorType == SelectorType.Scroll_Mouse)
         {
-            if (m_SlotSelector.InputHandler.ScrollUp())
+            bool screollUp = m_SlotSelector.InputHandler.ScrollUp();
+            bool screollDown = m_SlotSelector.InputHandler.ScrollDown();
+
+            if (screollUp)
                 Select(CurrentSelectionSlotIndex + 1);
 
-            if (m_SlotSelector.InputHandler.ScrollDown())
+            if (screollDown)
                 Select(CurrentSelectionSlotIndex - 1);
+
+            if(screollUp == false && screollDown == false)
+                Select(m_SlotSelector.InputHandler.SelectSlot(CurrentSelectionSlotIndex));
         }
     }
 }

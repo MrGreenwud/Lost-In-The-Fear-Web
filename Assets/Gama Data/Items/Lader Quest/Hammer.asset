@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Type: 1
   m_Icon: {fileID: 21300000, guid: e47b04b81b414b64fa06a4cf60a88292, type: 3}
   m_ItemName: Hammer
-  m_ID: 112
+  m_ID: 222
   m_Prefab: {fileID: 3138351540498635933, guid: 52a47cc9cd0184643904f36e3f522de1, type: 3}
   m_IsReueble: 0
   m_IsStaceble: 0

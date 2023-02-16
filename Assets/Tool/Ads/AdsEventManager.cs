@@ -4,12 +4,11 @@ using Zenject;
 
 public class AdsEventManager : MonoBehaviour
 {
-    [Inject] private readonly PlayerController m_PlayerController;
-
     public static AdsEventManager s_Instence;
 
-    public UnityEvent AfterDeaths;
+    [Inject] private readonly PlayerController m_PlayerController;
 
+    public UnityEvent AfterDeaths;
     [SerializeField] private uint m_MaxDeathCount = 3;
 
     private void Awake()

@@ -15,6 +15,8 @@ public class QuestCompliter : Interacteble
 
         [SerializeField] private Item[] m_RequiredItems;
 
+        [SerializeField] private uint MessageID;
+
         public Item[] GetRequiredItems()
         {
             Item[] tempRequiredItems = new Item[m_RequiredItems.Length];
@@ -24,6 +26,8 @@ public class QuestCompliter : Interacteble
 
             return tempRequiredItems;
         }
+
+        public uint GetMessageID() => MessageID;
 
         public void Complite()
         {
@@ -50,6 +54,28 @@ public class QuestCompliter : Interacteble
 
     public bool IsComplite { get; private set; }
     public Action OnComplite;
+
+    public uint GetMessageID()
+    {
+        if (m_QuestType == QuestType.One_Main_Action)
+        {
+            if (m_MainAction.IsComplite == false && Complite(m_MainAction) == false)
+                return m_MainAction.GetMessageID();
+        }
+
+        for (int i = 0; i < m_Actions.Length; i++)
+        {
+            if (m_Actions[i].IsComplite == false)
+            {
+                if (Complite(m_Actions[i]) == true)
+                    break;
+                
+                return m_Actions[0].GetMessageID();
+            }
+        }
+
+        return 0;
+    }
 
     public override void Interact()
     {
@@ -85,7 +111,8 @@ public class QuestCompliter : Interacteble
         Item[] tempRequiredItems = action.GetRequiredItems();
         List<Slot> requiredItemsSlots = m_Inventory.InventoryModel.FindAllSlotsByItems(tempRequiredItems);
 
-        if (requiredItemsSlots == null) return false;
+        if (requiredItemsSlots == null)
+            return false;
 
         if (requiredItemsSlots.Count == tempRequiredItems.Length)
         {

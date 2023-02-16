@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using Zenject;
 
 public class PlayerInteractor : MonoBehaviour
@@ -8,6 +9,8 @@ public class PlayerInteractor : MonoBehaviour
 
     [SerializeField] private LayerMask m_InteractLayer;
     [SerializeField] private float m_Distence = 5f;
+
+    public Action<Interacteble> OnIteract;
 
     private void Update()
     {
@@ -22,9 +25,12 @@ public class PlayerInteractor : MonoBehaviour
         {
             if (hit.collider.TryGetComponent<Interacteble>(out Interacteble interacteble))
             {
+                OnIteract?.Invoke(interacteble);
                 interacteble.Interact();
 
-                if (ItemUser.Instance.GetSlot().SlotModel.Item == null) return;
+                if (ItemUser.Instance.GetSlot().SlotModel.Item == null)
+                    return;
+
                 interacteble.Interact(ItemUser.Instance.GetSlot());
             }
         }

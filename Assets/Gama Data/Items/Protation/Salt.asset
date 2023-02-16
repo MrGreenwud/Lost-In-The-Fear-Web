@@ -20,6 +20,6 @@ MonoBehaviour:
   m_IsReueble: 0
   m_IsStaceble: 0
   m_MaxStacSize: 3
-  m_ProtationType: 1
+  m_ProtationType: 2
   m_StanTime: 15
   m_StanDistence: 2

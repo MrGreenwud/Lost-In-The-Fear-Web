@@ -1,7 +1,7 @@
+using System;
 using UnityEngine;
 using UnityEditor;
 using BCTSTool.Math;
-using System;
 
 public class Protactor : MonoBehaviour
 {
@@ -9,6 +9,7 @@ public class Protactor : MonoBehaviour
     public HollyWoterDroper HollyWoterDroper { get; private set; }
 
     public Action<EnemyController, float> OnEnemyStan;
+    public Action<Item> OnDrop;
 
     [Header("Mask Settings")]
 
@@ -101,11 +102,15 @@ public class Protactor : MonoBehaviour
 
         if (m_ProtationType == Protation.Salt)
         {
+            OnDrop?.Invoke(slot.SlotModel.Item);
+
             SaltDroper.Drop(m_StanTime, m_StanDistance);
             slotModel.UseItem();
         }
         else if (m_ProtationType == Protation.Holly_Water)
         {
+            OnDrop?.Invoke(slot.SlotModel.Item);
+
             HollyWoterDroper.Drop(m_StanTime);
             slotModel.UseItem();
         }

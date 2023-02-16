@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Type: 1
   m_Icon: {fileID: 21300000, guid: 0c642de1f4b47424699c836451b6140c, type: 3}
   m_ItemName: 'Graveyard''s Key '
-  m_ID: 243543534
+  m_ID: 1111111
   m_Prefab: {fileID: 5390502270842991762, guid: c21db9023e496264691c52836e8136c0, type: 3}
   m_IsReueble: 0
   m_IsStaceble: 0

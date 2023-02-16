@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using Zenject;
 
 public class SlotSelector : MonoBehaviour
@@ -17,6 +18,8 @@ public class SlotSelector : MonoBehaviour
     public SlotSelectorView SlotSelectorView { get; private set; }
 
     [SerializeField] private SelectorType m_SelectorType;
+
+    public Action OnSelect;
 
     public SelectorType GetSelectorType() => m_SelectorType;
 

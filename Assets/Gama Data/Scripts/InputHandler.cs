@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using NaughtyAttributes;
+using UnityEditor;
 
 public class InputHandler : MonoBehaviour
 {
@@ -61,7 +62,20 @@ public class InputHandler : MonoBehaviour
     [ShowIf("Device", DeviceInput.Desktop)]
     [SerializeField] private KeyCode m_Use = KeyCode.Mouse0;
 
+    [ShowIf("Device", DeviceInput.Desktop)]
+    [SerializeField] private KeyCode m_SelectSlot1 = KeyCode.Alpha1;
 
+    [ShowIf("Device", DeviceInput.Desktop)]
+    [SerializeField] private KeyCode m_SelectSlot2 = KeyCode.Alpha2;
+
+    [ShowIf("Device", DeviceInput.Desktop)]
+    [SerializeField] private KeyCode m_SelectSlot3 = KeyCode.Alpha3;
+
+    [ShowIf("Device", DeviceInput.Desktop)]
+    [SerializeField] private KeyCode m_SelectSlot4 = KeyCode.Alpha4;
+
+    [ShowIf("Device", DeviceInput.Desktop)]
+    [SerializeField] private KeyCode m_SelectSlot5 = KeyCode.Alpha5;
 
     #endregion
 
@@ -143,5 +157,21 @@ public class InputHandler : MonoBehaviour
     public bool ScrollDown()
     {
         return Input.mouseScrollDelta.y < 0;
+    }
+
+    public int SelectSlot(int selectonSlot)
+    {
+        if (Input.GetKeyDown(m_SelectSlot1))
+            selectonSlot = 0;
+        else if (Input.GetKeyDown(m_SelectSlot2))
+            selectonSlot = 1;
+        else if (Input.GetKeyDown(m_SelectSlot3))
+            selectonSlot = 2;
+        else if (Input.GetKeyDown(m_SelectSlot4))
+            selectonSlot = 3;
+        else if (Input.GetKeyDown(m_SelectSlot5))
+            selectonSlot = 4;
+
+        return selectonSlot;
     }
 }

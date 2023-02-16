@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Type: 1
   m_Icon: {fileID: 21300000, guid: a4dbedc44efd3a24796e0a2bda898647, type: 3}
   m_ItemName: Steps
-  m_ID: 111
+  m_ID: 212
   m_Prefab: {fileID: 5827234034619617576, guid: da5f0c63c7f87644ab90aa304e76ac22, type: 3}
   m_IsReueble: 0
   m_IsStaceble: 0

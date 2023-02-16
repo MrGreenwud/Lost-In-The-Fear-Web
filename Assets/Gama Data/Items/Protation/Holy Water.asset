@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Type: 4
   m_Icon: {fileID: 21300000, guid: 366668015f6586f43b5e110adfc24e2d, type: 3}
   m_ItemName: Holy Water
-  m_ID: 0
+  m_ID: 1
   m_Prefab: {fileID: 1947161453653434181, guid: 731925f9936ef394b85e8c6b37528987, type: 3}
   m_IsReueble: 0
   m_IsStaceble: 0

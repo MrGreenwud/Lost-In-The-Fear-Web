@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Type: 1
   m_Icon: {fileID: 21300000, guid: f9e7fa53bc47f7c428cc936dab4a0eb4, type: 3}
   m_ItemName: "\u0421rowbar"
-  m_ID: 403
+  m_ID: 302
   m_Prefab: {fileID: 9069490430501839330, guid: 6114802c1123dcb4ea501769a4d5edd4, type: 3}
   m_IsReueble: 0
   m_IsStaceble: 0
