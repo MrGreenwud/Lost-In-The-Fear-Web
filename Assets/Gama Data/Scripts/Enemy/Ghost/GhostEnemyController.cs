@@ -98,6 +98,7 @@ public class GhostEnemyController : BaseEnemyController
         p_PlayerController.PlayerStats.ApplyDamage(1);
         ApplyStan(m_AttackStanTime);
         ItemUser.Instance.Protactor.OnEnemyStan?.Invoke(this, m_AttackStanTime);
+
         base.Attack();
     }
 

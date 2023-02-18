@@ -14,6 +14,7 @@ public class GhostEnemySpawner : MonoBehaviour
     [SerializeField] private LayerMask m_TeleportPointLayer;
 
     private Transform m_Target;
+    public Coroutine StanCorotine { get; private set; }
 
     private Vector3 m_TeleportPostion;
 
@@ -36,18 +37,29 @@ public class GhostEnemySpawner : MonoBehaviour
 
     public void LetEnemy()
     {
-        StartCoroutine(Stan(m_SpawnTime));
+        OnStan(m_SpawnTime);
+        Debug.Log(StanCorotine);
     }
 
     public void SetEnemyStan(EnemyController enemyController, float time)
     {
-        if(enemyController.GetType().ToString() == "GhostEnemyController")
-            StartCoroutine(Stan(time));
+        if (enemyController is GhostEnemyController)
+            OnStan(time);
     }
 
     public void OnStan(float time)
     {
-        StartCoroutine(Stan(time));
+        StopStan();
+
+        StanCorotine = StartCoroutine(Stan(time));
+    }
+
+    public void StopStan()
+    {
+        if (StanCorotine == null) return;
+
+        StopCoroutine(StanCorotine);
+        StanCorotine = null;
     }
 
     private void SetSpawnPosition()
@@ -90,7 +102,7 @@ public class GhostEnemySpawner : MonoBehaviour
         m_EnemySpawner.SetSpawnPosition(m_TeleportPostion);
     }
 
-    private IEnumerator Stan(float time)
+    public IEnumerator Stan(float time)
     {
         yield return new WaitForSeconds(time);
         m_EnemySpawner.SpwanWhithType(EnemyType.Ghost, 1, false);

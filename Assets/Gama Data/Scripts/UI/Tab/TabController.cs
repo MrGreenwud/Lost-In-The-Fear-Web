@@ -62,8 +62,7 @@ public class TabController : MonoBehaviour
     
     public void ShowDeathTab()
     {
-        SceneManager.LoadScene(0);
-        //SwitchTab(m_DeathTab);
+        SwitchTab(m_DeathTab);
     }
 
     public void OpenReadTab()
