@@ -1,15 +1,11 @@
+using BCTSTool.Localization;
+
 public static class Settings
 {
-    public enum lenguage
-    {
-        ru,
-        en
-    }
-
     public static float s_Sensetivity = 200;
     public static float s_MaxSensetivity = 400;
 
-    public static lenguage s_Lenguage;
+    public static LenguageLocalization s_Lenguage { get; private set; }
 
     public static void SetSensetivity(float value)
     {
@@ -21,8 +17,9 @@ public static class Settings
         s_Sensetivity = value * s_MaxSensetivity;
     }
 
-    public static void SwichLenguage(lenguage lenguage)
+    public static void SwichLenguage(LenguageLocalization lenguage)
     {
+        if (lenguage == null) return;
         s_Lenguage = lenguage;
     }
 }

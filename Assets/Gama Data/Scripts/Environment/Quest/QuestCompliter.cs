@@ -70,7 +70,7 @@ public class QuestCompliter : Interacteble
                 if (Complite(m_Actions[i]) == true)
                     break;
                 
-                return m_Actions[0].GetMessageID();
+                return m_Actions[i].GetMessageID();
             }
         }
 

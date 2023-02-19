@@ -17,6 +17,9 @@ MonoBehaviour:
     m_Text: "\u0441\u0432\u044F\u0442\u0430\u044F \u0432\u043E\u0434\u0430"
   - m_ID: 2
     m_Text: "\u0441\u043E\u043B\u044C"
+  - m_ID: 110
+    m_Text: "\u043A\u043B\u044E\u0447 \u043E\u0442 \u0433\u043B\u0430\u0432\u043D\u044B\u0445
+      \u0432\u043E\u0440\u043E\u0442"
   - m_ID: 101
     m_Text: "\u0441\u0430\u0434\u043E\u0432\u044B\u0435 \u043D\u043E\u0436\u043D\u0438\u0446\u044B"
   - m_ID: 201
@@ -63,5 +66,33 @@ MonoBehaviour:
     m_Text: "\u041F\u0440\u0438\u0433\u0432\u043E\u0437\u0434\u0438\u043B\u0438 \u043D\u0430\u043C\u0435\u0440\u0442\u0432\u043E.
       \n\u0411\u0435\u0437 \u043B\u043E\u043C\u0430 \u043C\u043D\u0435 \u0435\u0433\u043E
       \u043D\u0435 \u043E\u0442\u043A\u0440\u044B\u0442\u044C."
-  - m_ID: 9999
-    m_Text: Win Text
+  - m_ID: 99991
+    m_Text: "(\u0422\u044F\u0436\u0451\u043B\u044B\u0439 \u0432\u0437\u0434\u043E\u0445)
+      \u0413\u043E\u0441\u043F\u043E\u0434\u0438... \u0427\u0442\u043E \u044D\u0442\u043E
+      \u0431\u044B\u043B\u043E?"
+  - m_ID: 99992
+    m_Text: "\u041A\u043E\u0433\u0434\u0430 \u043C\u0435\u043D\u044F \u0441\u044E\u0434\u0430
+      \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u044F\u043B\u0438, \u043D\u0438\u043A\u0442\u043E
+      \u043D\u0435 \u0433\u043E\u0432\u043E\u0440\u0438\u043B, \u0447\u0442\u043E
+      \u0442\u0443\u0442 \u043E\u0431\u0438\u0442\u0430\u0435\u0442 \u043A\u0430\u043A\u0430\u044F
+      \u0442\u0430 \u043D\u0435\u0436\u0438\u0442\u044C."
+  - m_ID: 99993
+    m_Text: "\u0412 \u043B\u044E\u0431\u043E\u043C \u0441\u043B\u0443\u0447\u0430\u0435
+      \u044F \u0441\u043B\u0438\u0448\u043A\u043E\u043C \u0434\u0430\u043B\u0435\u043A\u043E
+      \u0437\u0430\u0448\u0451\u043B, \u0447\u0442\u043E\u0431\u044B \u0432\u043E\u0437\u0432\u0440\u0430\u0449\u0430\u0442\u044C\u0441\u044F."
+  - m_ID: 99994
+    m_Text: "\r\u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0435\u043D\u0438\u0435
+      \u0441\u043B\u0435\u0434\u0443\u0435\u0442..."
+  m_Image:
+  - m_ID: 1
+    m_Sprite: {fileID: 21300000, guid: cede4f23eeee6ca41a6543fdad87fe57, type: 3}
+  - m_ID: 2
+    m_Sprite: {fileID: 21300000, guid: 312dcf8bdcc98264f85062533cca5823, type: 3}
+  - m_ID: 3
+    m_Sprite: {fileID: 21300000, guid: e0b79899428dba941847da6cb8aff7b5, type: 3}
+  - m_ID: 4
+    m_Sprite: {fileID: 21300000, guid: 3c8acd9b5dbaa05489650442c12db818, type: 3}
+  - m_ID: 5
+    m_Sprite: {fileID: 21300000, guid: 2748b100ffd71a94ea9c8deabcb1b084, type: 3}
+  - m_ID: 6
+    m_Sprite: {fileID: 21300000, guid: c0ff4800c0749424482569645e7788a5, type: 3}

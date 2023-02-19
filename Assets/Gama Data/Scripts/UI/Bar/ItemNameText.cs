@@ -7,7 +7,6 @@ using BCTSTool.Localization;
 public class ItemNameText : MonoBehaviour
 {
     [Inject] private readonly Inventory m_Inventory;
-    [SerializeField] private LenguageLocalization m_Localization;
 
     private TextMeshProUGUI m_TextMeshProUGUI;
 
@@ -48,7 +47,7 @@ public class ItemNameText : MonoBehaviour
 
         uint id = slot.SlotModel.Item.GetID();
 
-        m_TextMeshProUGUI.text = m_Localization.GetTextByID(id);
+        m_TextMeshProUGUI.text = Settings.s_Lenguage.GetTextByID(id);
     }
 
     private void ChengeAlpha(float alpha)

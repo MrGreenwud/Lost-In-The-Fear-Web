@@ -18,8 +18,6 @@ public class DeathTab : Tab
     [SerializeField] private Animator[] m_Buttons;
     [SerializeField] private Animator[] m_DarckScreen;
 
-    public Action OnReborn;
-
     private void Awake()
     {
         p_View = new DeathTabView(this);
@@ -87,7 +85,6 @@ public class DeathTab : Tab
     public void RebornButtonClick()
     {
         m_AdsEventManager.OnRebornButtonClick?.Invoke();
-        m_AdsEventManager.OnReborn?.Invoke();
 
         Debug.Log("Reborn");
     }

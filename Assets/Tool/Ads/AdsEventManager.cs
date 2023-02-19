@@ -36,4 +36,9 @@ public class AdsEventManager : MonoBehaviour
 
         Debug.Log(PlayerDeathCounter.DeathCount);
     }
+
+    public void Reborn()
+    {
+        OnReborn?.Invoke();
+    }
 }
