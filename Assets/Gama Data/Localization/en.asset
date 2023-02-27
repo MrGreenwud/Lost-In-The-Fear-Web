@@ -76,3 +76,9 @@ MonoBehaviour:
     m_Sprite: {fileID: 21300000, guid: 4ab0db67d4a999d42a898b0c11753ce7, type: 3}
   - m_ID: 6
     m_Sprite: {fileID: 21300000, guid: 215babc5b16868f40b2880ce49129877, type: 3}
+  - m_ID: 7
+    m_Sprite: {fileID: 21300000, guid: fc841bd4944fdcd4a86a28f122048dc8, type: 3}
+  - m_ID: 8
+    m_Sprite: {fileID: 21300000, guid: 862b2bf8388a18e44bd29259c0721598, type: 3}
+  - m_ID: 9
+    m_Sprite: {fileID: 21300000, guid: 3e7f49fe064e173418bcd71bcfe45961, type: 3}
